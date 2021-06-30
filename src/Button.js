@@ -1,9 +1,8 @@
-import './button.css';
 
 
 const CallToAction =() => {
     return(
-        <button className ="action-button">Book Now</button>
+        <button className="actionButton">Book Now</button>
     )
 }
 
