@@ -1,8 +1,4 @@
-import CallToAction from './Button';
-import Example from './hooks';
-import Welcome from './Welcome'
-
-
+import Header from './components/Header'
 
 
 
@@ -10,13 +6,14 @@ function App() {
 
   return (
     <div>
-      <Welcome name="Peter" age="22"/>     
-        <CallToAction />
-        <Example />
-         
+      <Header />
     </div>
   )
     
 }
 
 export default App;
+
+
+
+
