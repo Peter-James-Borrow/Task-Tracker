@@ -10,7 +10,7 @@ const Header = ({title}) => {
             <h1>{title}</h1>
             <Buttons 
             color='green' 
-            text='Hello' 
+            text='Add' 
             onClick={onClick} 
             />
             
