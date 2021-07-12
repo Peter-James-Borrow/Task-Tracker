@@ -1,6 +1,7 @@
+import { useState } from "react"
 import Header from './components/Header'
 import Tasks from './components/Tasks'
-import { useState } from "react"
+import AddTask from './components/AddTask'
 
 
 
@@ -31,8 +32,15 @@ function App() {
             day: 'Aug 26th at 16.15',
             reminder: false,
         }
-    ]
-)
+    ])
+    
+    //Add Task
+    const addTask =(task) => {
+        const id = Math.floor(Math.random() *10000) + 1
+        const newTask = {id, ...task}
+        setTasks([...tasks, newTask])
+    }
+
     // Delete Task
     const deleteTask =(id) => {
         setTasks(tasks.filter((task) => task.id !== id))
@@ -49,6 +57,7 @@ function App() {
   return (
     <div>
       <Header />
+      <AddTask onAdd={addTask} />
      { tasks.length > 0 ? (<Tasks tasks={tasks} 
      onDelete={deleteTask} onToggle={toggleReminder} /> 
      ):(
